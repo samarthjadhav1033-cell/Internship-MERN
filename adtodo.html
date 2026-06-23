@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>My To Do List</h1>
+
+    <div class="input-box">
+        <input type="text" id="todo" placeholder="Add your task...">
+        <button onclick="addTodo()">Add</button>
+    </div>
+
+    <ul id="todolist"></ul>
+</div>
+
+<script>
+    let arr = [];
+    let task = document.getElementById("todo");
+    let list = document.getElementById("todolist");
+
+    function addTodo() {
+        if (task.value.trim() === "") {
+            alert("Please enter a task");
+            return;
+        }
+
+        arr.push({
+            text: task.value,
+            completed: false
+        });
+
+        task.value = "";
+        renderTodo();
+    }
+
+    function toggleTodo(index) {
+        arr[index].completed = !arr[index].completed;
+        renderTodo();
+    }
+
+    function deleteTodo(index) {
+        arr.splice(index, 1);
+        renderTodo();
+    }
+
+    function renderTodo() {
+        list.innerHTML = "";
+
+        arr.forEach((val, index) => {
+            list.innerHTML += `
+                <li class="${val.completed ? 'done' : ''}">
+                    <div class="task" onclick="toggleTodo(${index})">
+                        <span class="tick">${val.completed ? '✔' : ''}</span>
+                        ${val.text}
+                    </div>
+                    <button class="delete" onclick="deleteTodo(${index})">✖</button>
+                </li>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>

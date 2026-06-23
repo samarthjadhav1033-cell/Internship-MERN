@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Online Shoping Discount</h1>
+    <script>
+        var amount=Number(prompt("Enter amount"));
+        discount = 0;
+        if(amount>5000){
+            discount=0.20;
+            document.write("you get 20% discount");
+            
+        }
+        else if(amount>3000){
+            discount=0.10;
+            document.write("you get 10% discount");
+        }
+        else if(amount>1000){
+            discount=0.5;
+            document.write("you get 5% discount");
+        }
+        else{
+            document.write("No discount");
+            
+        }
+        document.write("Original amount :" + amount);
+        
+        var discountedprice= amount-(amount*discount);
+        document.write("Total amount after disount:" +discountedprice);
+        
+    
+    </script>
+</body>
+</html>

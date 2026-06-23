@@ -13,14 +13,14 @@
 // console.log(a);
 // hoisting is possible
 
-// let a=Number(prompt("Enter first number"));
-// let b=Number(prompt("Enter second number"));
-// let c=Number(prompt("Enter third number"));
-// let a=11
-// let b=20
-// let c=15
-// let midd= ((a>b&&a<c) ||(a<b&&a>c))? a:((b>a&&b<c)||(b<a&&b>c))? b : c;
-// 
-// console.log("middle number is",midd);
+let a=Number(prompt("Enter first number"));
+let b=Number(prompt("Enter second number"));
+let c=Number(prompt("Enter third number"));
+console.log(a,b,c);
+
+
+let midd= ((a>b&&a<c) ||(a<b&&a>c))? a:((b>a&&b<c)||(b<a&&b>c))? b : c;
+
+console.log("middle number is",midd);
 
 

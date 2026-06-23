@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#a7e4f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:900px;
+    height:550px;
+    background:#d9f3fc;
+    border-radius:20px;
+    position:relative;
+    padding:50px;
+    overflow:hidden;
+}
+
+.circle{
+    width:300px;
+    height:300px;
+    background:#6d8ff5;
+    border-radius:50%;
+    position:absolute;
+    top:-100px;
+    right:-100px;
+}
+
+.profile img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:8px solid white;
+    object-fit:cover;
+    position:absolute;
+    left:50px;
+    top:80px;
+}
+
+.content{
+    margin-left:250px;
+    margin-top:60px;
+}
+
+.content h1{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.content h3{
+    font-size:28px;
+    margin-top:10px;
+}
+
+.content p{
+    margin-top:30px;
+    font-size:28px;
+    line-height:45px;
+    color:#333;
+    width:80%;
+}
+
+.stats{
+    display:flex;
+    gap:100px;
+    margin-top:40px;
+}
+
+.stats h2{
+    font-size:40px;
+}
+
+.stats span{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.buttons{
+    margin-top:50px;
+    display:flex;
+    gap:20px;
+}
+
+button{
+    padding:20px 50px;
+    font-size:28px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.follow{
+    background:black;
+    color:white;
+    border:none;
+}
+
+.profile-btn{
+    background:transparent;
+    border:2px solid black;
+}

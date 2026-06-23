@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><H1>Simple ATM System </H1>
+    <script>
+        let balance=200000;
+        let ch =Number(prompt("Enter choice : \n1.Check Balance\n2. Withdraw\n3.Deposit\n4.Exit"));
+    
+
+        switch (ch) {
+            case 1:document.write("Your balance is : "+balance);
+            break;
+
+            case 2:let withdrawalamount=Number(prompt("Enter amount to withdraw :"));
+                    if(withdrawalamount<=balance){
+                        balance -= withdrawalamount;
+                        document.write("withdraw successfull.Your new balance is :" +balance);
+                        
+                    }
+                    else{
+                        document.write("check your balance");
+                        
+                    }
+                    break;
+
+            case 3: balance +=Number(prompt("Enter amount to deposit"));
+                    document.write("Amount deposited sucessfully.Your account balance is :" + balance);
+                    break;
+                    
+            case 4: document.write("Thank you . Visit Again");
+                    break;
+            
+            default: documnet.write(" Please Enter valid option");
+            
+            
+        }
+
+    </script>
+    
+</body>
+</html>

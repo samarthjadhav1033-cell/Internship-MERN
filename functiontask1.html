@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Amazon lite</h1>
+    <label for="">Enter price</label>
+    <input type="number" name="" id="price">
+    <br><br>
+    <label for="">Enter quantity</label>
+    <input type="number" name="" id="qn">
+    <br><br>
+    <button onclick="getbill()">Calculate Bill</button>    
+    <br><br>
+    <button onclick="getdiscount1()">Apply 10 % discount</button>
+    <button onclick="getdiscount2()">Apply 20 % discount</button>
+    <button onclick="getdiscount3()">Apply 30 % discount</button>
+    <h2 id="result"></h2>
+
+    <script>
+        var price=document.getElementById("price")
+        var qn =document.getElementById("qn")
+        var result=document.getElementById("result")
+        let totalbill=0
+
+        function getbill(){
+            totalbill=(price.value*qn.value)
+            result.innerHTML="Total Bill : "+totalbill
+
+        }
+        function getdiscount1() {
+            if (totalbill>=1000) {
+                var discount = totalbill*0.10
+                result.innerHTML="Total Bill : " +totalbill+
+                "<br> discount 10 % : "+discount+
+                "<br>final bill : "+(totalbill-discount)+
+                "<br><button>Proceed to pay</button>"
+            
+            }else{
+                    alert("Add item worth "+(1000-totalbill)+" to your cart")
+            }
+        }
+            function getdiscount2() {
+            if (totalbill>=2000) {
+                var discount = totalbill*0.20
+                result.innerHTML="Total Bill : " +totalbill+
+                "<br> discount 10 % : "+discount+
+                "<br>final bill : "+(totalbill-discount)+
+                "<br><button>Proceed to pay</button>"
+            
+            }else{
+                    alert("Add item worth "+(2000-totalbill)+" to your cart")
+            }
+        }
+        function getdiscount3() {
+            if (totalbill>=3000) {
+                var discount = totalbill*0.30
+                result.innerHTML="Total Bill : " +totalbill+
+                "<br> discount 10 % : "+discount+
+                "<br>final bill : "+(totalbill-discount)+
+                "<br><button>Proceed to pay</button>"
+            
+            }else{
+                    alert("Add item worth "+(3000-totalbill)+" to your cart")
+            }
+        }
+    </script>
+
+
+</body>
+</html>
