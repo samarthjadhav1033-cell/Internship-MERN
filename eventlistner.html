@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-left: 300px;
+
+        }
+        btn{
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <br>
+    <button id="btn">Change signal</button>
+
+    <script>
+        let btn=document.getElementById("btn");
+        let box=document.getElementById("box");
+        let box1=document.getElementById("box1");
+        let box2=document.getElementById("box2");
+
+        let signal=1;
+        btn.addEventListener("click",function(){
+            box.style.backgroundColor="gray";
+            box1.style.backgroundColor="gray";
+            box2.style.backgroundColor="gray";
+
+            if(signal==1){
+                box.style.backgroundColor="red";
+                signal=2;
+            }
+            else if(signal==2){
+                box1.style.backgroundColor="yellow";
+                signal=3;
+            }
+            else if(signal==3){
+                box2.style.backgroundColor="green";
+                signal=1;
+
+            }
+
+        });
+    </script>
+</body>
+</html>
